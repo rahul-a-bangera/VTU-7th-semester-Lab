@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type="text/css" href="5.css"?>
+<!DOCTYPE student [
+<!ELEMENT student_info (h1,h2+,ad+)>
+<!ELEMENT ad (label)>
+<!ELEMENT usn (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT college (#PCDATA)>
+<!ELEMENT branch (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT label (#PCDATA |usn|name|college|branch|year|email)*>
+<!ELEMENT h2 (#PCDATA)>
+<!ELEMENT h1 (#PCDATA)>
+]>
+
+<student_info>
+<h1> Student information</h1>
+<h2>Student 1</h2>
+<ad><label>USN:<usn>4SF17IS060</usn></label></ad>
+<ad><label>NAME:<name>Rahul A</name></label></ad>
+<ad><label>COLLEGE:<college>Sahyadri</college></label></ad>
+<ad><label>BRANCH:<branch>Ise</branch></label></ad>
+<ad><label>YEAR:<year>2017</year></label></ad>
+<ad><label>EMAIL:<email>bangs@gmail.com</email></label></ad>
+<h2>Student 2</h2>
+<ad><label>USN:<usn>4SF17IS060</usn></label></ad>
+<ad><label>NAME:<name>Rahul A</name></label></ad>
+<ad><label>USN:<college>Sahyadri</college></label></ad>
+<ad><label>USN:<branch>Ise</branch></label></ad>
+<ad><label>USN:<year>2017</year></label></ad>
+<ad><label>USN:<email>bangs@gmail.com</email></label></ad>
+<h2>Student 3</h2>
+<ad><label>USN:<usn>4SF17IS060</usn></label></ad>
+<ad><label>NAME:<name>Rahul A</name></label></ad>
+<ad><label>USN:<college>Sahyadri</college></label></ad>
+<ad><label>USN:<branch>Ise</branch></label></ad>
+<ad><label>USN:<year>2017</year></label></ad>
+<ad><label>USN:<email>bangs@gmail.com</email></label></ad>
+<h2>Student 4</h2>
+<ad><label>USN:<usn>4SF17IS060</usn></label></ad>
+<ad><label>NAME:<name>Rahul A</name></label></ad>
+<ad><label>USN:<college>Sahyadri</college></label></ad>
+<ad><label>USN:<branch>Ise</branch></label></ad>
+<ad><label>USN:<year>2017</year></label></ad>
+<ad><label>USN:<email>bangs@gmail.com</email></label></ad>
+</student_info>
+
+
+
+
+
+

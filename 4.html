@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vowel finding and Reverse of no</title>
+    <script type="text/javascript">
+      function validate() {
+        var inp = document.getElementById("val").value;
+        console.log(inp);
+        if (isNaN(inp)) {
+          findVowel(inp);
+        } else {
+          findreverse(inp);
+        }
+      }
+      function findVowel(inp) {
+        var ch = "",
+          pos = 0;
+        var str = inp.toLowerCase();
+        console.log(str);
+        for (var i = 0; i < str.length; i++) {
+          ch = str.charAt(i);
+          console.log(ch);
+          if (ch == "a" || ch == "e" || ch == "i" || ch == "o" || ch == "u") {
+            pos = i++;
+            console.log("vowel found at position " + pos);
+            break;
+          }
+        }
+        if (pos == 0) {
+          alert("No vowel found");
+        } else {
+          alert("left most vowel found at " + pos);
+        }
+      }
+      function findreverse(inp) {
+        console.log("inside reverse");
+        var num = parseInt(inp);
+        var rem = 0,
+          rev = 0,
+          temp = num;
+        while (num > 0) {
+          rem = num % 10;
+          rev = rev * 10 + rem;
+          num = parseInt(num / 10);
+        }
+
+        alert("Number: " + temp + "\n Reverse Number: " + rev);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 style="text-align: center">
+      Program to find left most vowel and Reverse of no
+    </h1>
+    <div style="margin-left: 40%">
+      <input
+        style="text-align: center"
+        type="text"
+        id="val"
+        name="val"
+        placeholder="Enter a string or a No"
+      />
+
+      <input type="button" value="SUBMIT" onclick="validate()" />
+    </div>
+  </body>
+</html>

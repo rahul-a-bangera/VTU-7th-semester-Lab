@@ -1,0 +1,29 @@
+h1 {
+  color: rgb(0, 247, 0);
+  font-size: 40px;
+  margin: 60px;
+}
+h2 {
+  display: block;
+  margin-left: 40px;
+  margin-top: 40px;
+  color: brown;
+  font-size: 40px;
+}
+ad {
+  color: blue;
+  display: block;
+  margin-left: 40px;
+  margin-top: 20px;
+  font-size: 40px;
+}
+usn,
+name,
+college,
+branch,
+year,
+email {
+  margin-left: 40px;
+  font-size: 40px;
+  color: black;
+}

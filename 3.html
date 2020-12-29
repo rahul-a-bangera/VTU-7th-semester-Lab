@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Text animation</title>
+
+    <script type="text/javascript">
+      function animate() {
+        var val = window.getComputedStyle(document.getElementById("para"))
+          .fontSize;
+        var fontsize = parseInt(val);
+        var state = "growing";
+        var timer = setInterval(textanimate, 100);
+
+        function textanimate() {
+          if (state == "growing") {
+            fontsize++;
+            document.getElementById("para").innerHTML = "Text Growing";
+            document.getElementById("para").style.color = "red";
+            document.getElementById("para").style.fontSize = fontsize + "pt";
+          }
+          if (state == "shrinking") {
+            fontsize--;
+            document.getElementById("para").innerHTML = "Text shrinking";
+            document.getElementById("para").style.color = "blue";
+            document.getElementById("para").style.fontSize = fontsize + "pt";
+          }
+          if (fontsize == 50) {
+            state = "shrinking";
+          }
+          if (fontsize == 5) {
+            clearInterval(timer);
+          }
+        }
+      }
+    </script>
+  </head>
+  <body onload="animate()">
+    <h1 style="text-align: center"></h1>
+    <p style="text-align: center" id="para"></p>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Simple calculator</title>
+</head>
+<script type="text/javascript">
+var op1=0,op2=0,res="",from="",operator="";
+
+function reset(){
+
+document.getElementById('res').value="";
+op1=0;
+op2=0;
+from="";
+operator="";
+console.log("reset() performed");
+}
+
+function insertOperand(operand){
+	if(from=="calculate")
+		reset();
+	else
+		if(from=="operator")
+			document.getElementById('res').value="";
+
+	document.getElementById('res').value+=operand;
+	from="operand";
+
+}
+
+function insertOperator(op){
+	
+	if(op1==0)
+		op1=document.getElementById('res').value;
+	else
+		if(from=="operator")
+			calculate();
+	operator=op;
+	from="operator";
+}
+function calculate(){
+	op2=document.getElementById('res').value;
+	op1=parseInt(op1);
+	op2=parseInt(op2);
+	switch(operator){
+		case '+':res=op1+op2;break;
+		case '-':res=op1-op2;break;
+		case '*':res=op1*op2;break;
+		case '/':if(op2==0)
+				res=0;
+			else
+				res=parseInt(op1/op2);
+			break;
+	}
+	
+	document.getElementById('res').value=res;
+	op1=res;
+	op2=0;
+	operator="";
+	from="calculate";
+}			
+
+</script>
+
+<style type="text/css">
+
+h1{
+text-align:center;
+}
+
+input
+{
+height:100%;
+width:100%;
+font-size: 20px;
+color: #e60d0d;
+}
+
+td{
+height:60px;
+width:50px;
+}
+
+</style>
+
+<body onload="reset()">
+<h1>Calculator</h1>
+<table align="center" border="4">
+<tr>
+<td colspan="5"><input type="text" name="res" value="" id="res" /></td>
+</tr>
+<tr>
+<td> <input type="button"  value="7" onclick="insertOperand('7')" /></td>
+
+<td> <input type="button"  value="8" onclick="insertOperand('8')" /></td>
+
+<td> <input type="button"  value="9" onclick="insertOperand('9')" /></td>
+
+<td> <input type="button"  value="+" onclick="insertOperator('+')" /></td>
+
+<td> <input type="button"  value="-" onclick="insertOperator('-')" /></td>
+
+</tr>
+<tr>
+<td> <input type="button"  value="4" onclick="insertOperand('4')" /></td>
+
+<td> <input type="button"  value="5" onclick="insertOperand('5')" /></td>
+
+<td> <input type="button"  value="6" onclick="insertOperand('6')" /></td>
+
+<td> <input type="button"  value="*" onclick="insertOperator('*')" /></td>
+
+<td> <input type="button"  value="/" onclick="insertOperator('/')" /></td>
+
+</tr>
+
+<tr>
+<td> <input type="button"  value="1" onclick="insertOperand('1')" /></td>
+
+<td> <input type="button"  value="2" onclick="insertOperand('2')" /></td>
+
+<td> <input type="button"  value="3" onclick="insertOperand('3')" /></td>
+
+<td> <input type="button"  value="0" onclick="insertOperand('0')" /></td>
+
+<td> <input type="button"  value="=" onclick="calculate()" /></td>
+
+</tr>
+<tr>
+<td colspan="5" ><input type="button" value="CLEAR"  onclick="reset()" /></td>
+</tr>
+
+
+</body>
+</html>
