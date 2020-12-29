@@ -1,3 +1,3 @@
 # weblab
 
-##vtu syllabus 7th sem 
+## vtu syllabus 7th sem 
