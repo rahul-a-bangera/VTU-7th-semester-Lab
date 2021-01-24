@@ -1,3 +1,4 @@
+<!-- Find the transpose of a matrix. -->
 <?php
 echo "<html><head><title>Transpose of matrix</title></head>";
 $mat=Array(Array(1,2),Array(4,5),Array(7,8));

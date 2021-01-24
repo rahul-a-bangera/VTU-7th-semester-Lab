@@ -1,3 +1,4 @@
+<!-- Multiplication of two matrices -->
 <?php
 $mat1=Array(Array(1,2),Array(3,4),Array(5,6));
 $mat2=Array(Array(1,2,3),Array(4,5,6));
@@ -5,7 +6,7 @@ $res=Array();
 echo "<html><head><title>Matrix Multiplication</title></head>";
 
 if(count($mat1[0])!=count($mat2)){
-    echo "<h1>incomplatible matrices </br></h1>";
+    echo "<h1>incompatible matrices </br></h1>";
     exit(0);
 }
 

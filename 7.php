@@ -1,3 +1,4 @@
+<!-- Write a PHP program to display a digital clock which displays the current time of the server. -->
 <html>
 <head>
 <meta http-equiv="refresh" content="1">

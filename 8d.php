@@ -1,3 +1,4 @@
+<!-- Addition of two matrices. -->
 <?php
 $mat1=Array(Array(1,2),Array(3,4),Array(5,6));
 $mat2=Array(Array(1,3),Array(3,5),Array(5,7));
