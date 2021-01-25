@@ -1,3 +1,3 @@
-# weblab
+# VTU 7TH semester
 
-## vtu syllabus 7th sem 
+## WEB LAB AND MACHINE LEARNING LAB
